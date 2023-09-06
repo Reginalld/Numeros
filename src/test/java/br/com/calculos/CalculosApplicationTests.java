@@ -1,5 +1,7 @@
 package br.com.calculos;
 
+import br.com.calculos.service.NumeroService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -7,7 +9,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 class CalculosApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void testeMetodoSomar(){
+		NumeroService numero = new NumeroService();
+		var soma = numero.calculaMedia();
+		Assertions.assertEquals(3, soma);
+
 	}
 
 }
